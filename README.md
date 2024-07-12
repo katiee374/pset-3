@@ -1,4 +1,4 @@
-# PSET 3: Inheritance & Polymorphism
+ # PSET 3: Inheritance & Polymorphism
 ## Part 1: Zoo Management
 In this part of the assignment, you will model a zoo, using inheritance 
 concepts. You should create an Animal interface, and then create classes 
@@ -14,25 +14,27 @@ Upload a picture of the UML diagram to this repository.
 
 ## Part 2: Restructuring the Adventure Game
 In this part of the assignment, you should restructure your adventure game to 
-follow an inheritance structure. You will create a Thing class and modify 
-Actor and Room to inherit from it. Make a copy of Thing.java and modify your 
-existing Actor and Room files. When you're done, copy and paste your code into 
-this repository, and upload copies of your new Actor.java and Room.java files.
+follow an inheritance structure. You will create a Treasure class and modify 
+Food and Key to inherit from it. You will also create a Thing class and modify 
+Treasure and Animal to inherit from it. Treasure will include a value and any 
+methods unique to Treasures. Thing will include a name and description, as well 
+as anything else commmon between Treasures and Animals. 
+You should add an ArrayList<Thing> to your Room class to represent the animals 
+or other objects in the Room.
+When you're done, upload copies of your updated files to this repository.
 
 ## Part 3: Container Classes
-In this part, you will create the ThingHolder class, which will represent an 
-ArrayList of type Thing. Copy and complete the file ThingHolder.java. When 
-you're done, copy and paste your code back into this repository.
+In this part, you will create the TreasureChest class, which will represent a 
+collection of Treasures. It will have an ArrayList of Treasures as well as boolean 
+fields representing whether or not the chest is open or openable. You should add 
+an ArrayList<TreasureChest> to your Room class to represent the chests in each 
+room, and initialize them in your Game class.
 
-You will also create the ContainerThing class, which descends from ThingHolder 
-but has the additional functionality of being open or closed. Copy and 
-complete the file ContainerThing.java. When you're done, copy and paste your 
-code into this repository.
+When you're done, upload your updated files to this repository.
 
 ## Part 4: Additional Functionality
-Additionally, we will add the functionality to take and drop objects. You 
-should add "take" and "drop" to your ArrayList of commands. In the Game class, write a
-takeObj method, which accepts an Actor, Room, and Treasure, and a dropObj 
-method with the same parameters. In each method, move the Treasure from the 
-Room to the Actor or vice versa by calling the setter methods for the 
-inventory of a Room or Actor.
+Additionally, we will add the functionality to take and drop objects. In the 
+Game class, write a takeObj method, which accepts an Actor, Room, and 
+Treasure, and a dropObj method with the same parameters. In each method, move 
+the Treasure from the Room to the Actor or vice versa by calling the setter 
+methods for the inventory of a Room or Actor.
